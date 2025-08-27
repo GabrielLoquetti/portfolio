@@ -241,27 +241,51 @@ section span {
   opacity: 0;
 }
 
-.skill-per.html {
+.skill-per.python {
   /*progreso de las diferentes lenguajes*/
   width: 80%;
   animation-delay: 0.1s;
 }
 
-.skill-per.css {
+.skill-per.php {
   /*progreso de las diferentes lenguajes*/
-  width: 30%;
+  width: 60%;
   animation-delay: 0.1s;
 }
 
 .skill-per.javascript {
-  /*progreso de las diferentes lenguajes*/
-  width: 40%;
+  flex-wrap: nowrap;
+  width: 20%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.react {
+  flex-wrap: nowrap;
+  width: 20%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.mysql {
+  flex-wrap: nowrap;
+  width: 30%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.laravel {
+  flex-wrap: nowrap;
+  width: 60%;
   animation-delay: 0.2s;
 }
 
 .skill-per.nodejs {
+  flex-wrap: nowrap;
+  width: 20%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.bootstrap {
   /*progreso de las diferentes lenguajes*/
-  width: 70%;
+  width: 40%;
   animation-delay: 0.3s;
 }
 
@@ -327,6 +351,58 @@ section span {
 
   transition: 400ms;
 }
+
+/* From Uiverse.io by Mangesh636 */ 
+button.linkedin {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(0, 119, 181);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(0, 119, 181);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+button.linkedin span {
+  margin: 10px;
+}
+
+button.linkedin::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+button.linkedin:hover {
+  color: #fff;
+  border: 1px solid rgb(0, 119, 181);
+}
+
+button.linkedin:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(0, 119, 181);
+}
+
 
 body.light-mode .button,
 body.light-mode #home h4 {
@@ -409,11 +485,11 @@ body nav#navigation .social-links li:nth-child(4) svg:hover path:nth-child(2) {
 /* == == */
 
 #projects .card circle {
-  fill: var(--secundary-color);
+  fill: var(--secundary-colorcolor);
 }
 
 #backToTopButton circle {
-  fill: var(--primary-color);
+  fill: var(--secundary-color);
 }
 
 #contact li path,
@@ -1698,60 +1774,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   }
 }
 
-  /* From Uiverse.io by andrew-demchenk0 */ 
-.theme {
-  --bg-color: #fff;
-  --main-color: #323232;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--bg-color);
-  border-radius: 100%;
-  border: 2px solid var(--main-color);
-  box-shadow: 4px 4px var(--main-color);
-}
 
-.input {
-  cursor: pointer;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  opacity: 0;
-}
-
-.icon {
-  position: absolute;
-  top: calc(50% -13px);
-  left: calc(50% -13px);
-  width: 26px;
-  height: 26px;
-}
-
-.icon.icon-moon {
-  fill: var(--main-color);
-}
-
-.icon.icon-sun {
-  stroke: var(--main-color);
-  display: none;
-}
-
-.input:checked ~ .icon.icon-sun {
-  display: block;
-}
-
-.input:checked ~ .icon.icon-moon {
-  display: none;
-}
-
-.theme:active {
-  box-shadow: 0px 0px var(--main-color);
-  transform: translate(3px, 3px);
-}
 
 @media (max-width: 410px) {
   #home .wrapper::before {

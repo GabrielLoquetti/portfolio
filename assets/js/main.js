@@ -3,7 +3,7 @@ import { projetos } from "./projetos.js";
 
 const navigation = document.querySelector("#navigation");
 const backToTopButton = document.querySelector("#backToTopButton");
-const checkbox = document.getElementById("sw-checkbox");
+const bb8Checkbox = document.querySelector(".bb8-toggle__checkbox");
 const projectsSection = document.querySelector("#projects .wrapper");
 
 const notebook_1 = document.querySelector("#notebook-1");
@@ -119,6 +119,20 @@ ScrollReveal({
   #contact header`
 );
 
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("light-mode");
+// Tema inicial salvo no localStorage
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  document.body.classList.add(savedTheme);
+  if (savedTheme === "light-mode") bb8Checkbox.checked = true;
+}
+
+// Alterna tema ao clicar no BB-8
+bb8Checkbox.addEventListener("change", () => {
+  if (bb8Checkbox.checked) {
+    document.body.classList.add("light-mode");
+    localStorage.setItem("theme", "light-mode");
+  } else {
+    document.body.classList.remove("light-mode");
+    localStorage.setItem("theme", "dark-mode");
+  }
 });
