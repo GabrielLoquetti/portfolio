@@ -13,11 +13,11 @@ function projetos(section) {
         </div>
 
         <div class="card"
-          <h3>Nalift Brasil</h3>
+          <h3>BRT x Nalift</h3>
           <a href="https://github.com/GabrielLoquetti/nalift.com.br">
-            <img src="./assets/images/CryptoBR Project.png" alt="Nalift Brasil">
+            <img src="./assets/images/CryptoBR Project.png" alt="BRT x Nalift">
           </a>
-          <p>Descrição do projeto Nalift Brasil</p> 
+          <p>Descrição do projeto BRT x Nalift</p> 
         </div>
 
         <div class="card"
