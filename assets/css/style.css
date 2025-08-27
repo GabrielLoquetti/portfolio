@@ -44,7 +44,7 @@ body {
   background-color: var(--bg-color);
 }
 
-/* CORES DO MODO CLARO */
+/* CORES DO MODO CLARO  */
 body.light-mode {
   --secundary-color: rgb(229, 229, 229);
   --third-color: hwb(0 48% 52% / 0.356);
@@ -71,10 +71,68 @@ body.light-mode {
 
 .wrapper {
   width: min(50rem, 100%);
-
   margin-inline: auto;
   padding-inline: 2.4rem;
 }
+
+/* BOTÃO GITHUB */
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.icon {
+  background-color: #fff;
+  padding: 10px 10px 5px 10px;
+}
+
+.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.cube {
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 20px;
+}
+
+.button-icon:hover {
+  border-color: #ff98a2;
+}
+
+.button-icon:hover .cube {
+  transform: rotateX(90deg);
+}
+
+.side {
+  position: absolute;
+  height: 47px;
+  width: 200px;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.top {
+  background: #ff98a2;
+  color: #fff;
+  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+
+.front {
+  background: #222229;
+  color: #fff;
+  transform: translate3d(0, 0, 1em);
+}
+
 
 ul {
   list-style: none;
@@ -112,6 +170,13 @@ section header h2 {
   color: var(--primary-color);
 }
 
+section header h1 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
 section h3 {
   color: var(--headline);
 }
@@ -124,6 +189,119 @@ section span {
 
   color: var(--paragraph);
 }
+
+/* PORCENTAGENS DE APRENDIZADO, DIREITA E ESQUERDA*/
+.container-porcentagens {
+  display: flex;
+  justify-content: space-between; /* separa para os lados */
+  align-items: flex-start; /* alinha pelo topo, melhor para skill-box */
+  gap: 20px; /* espaço entre os blocos */
+  width: 100%;
+}
+
+.porcentagem.esquerda,
+.porcentagem.direita {
+  max-width: 500px;
+  width: 100%;
+  flex: 1; /* ocupa espaço proporcional dentro do container */
+  padding: 10px 20px;
+  border-radius: 7px;
+  user-select: none;
+  background: #b0afaf09;
+}
+
+.porcentagem .skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffffd4;
+}
+
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background: #000000;
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.skill-per.html {
+  /*progreso de las diferentes lenguajes*/
+  width: 80%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.css {
+  /*progreso de las diferentes lenguajes*/
+  width: 30%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.javascript {
+  /*progreso de las diferentes lenguajes*/
+  width: 40%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.nodejs {
+  /*progreso de las diferentes lenguajes*/
+  width: 70%;
+  animation-delay: 0.3s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #000000;
+
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background: #000000;
+  transform: translateX(-50%) rotate(45deg);
+}
+
 
 .button {
   background: none;
