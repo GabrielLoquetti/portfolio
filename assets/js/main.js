@@ -3,7 +3,7 @@ import { projetos } from "./projetos.js";
 
 const navigation = document.querySelector("#navigation");
 const backToTopButton = document.querySelector("#backToTopButton");
-const toggle = document.querySelector("#sw-checkbox");
+const checkbox = document.getElementById("sw-checkbox");
 const projectsSection = document.querySelector("#projects .wrapper");
 
 const notebook_1 = document.querySelector("#notebook-1");
@@ -119,6 +119,6 @@ ScrollReveal({
   #contact header`
 );
 
-toggle.addEventListener("change", () => {
+checkbox.addEventListener("change", () => {
   document.body.classList.toggle("light-mode");
 });

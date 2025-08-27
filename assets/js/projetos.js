@@ -5,12 +5,29 @@ function projetos(section) {
     <div class="content">
       <div class="cards">
         <div class="card"
-          <h3>CryptoBR</h3>
-          <a href="https://github.com/MaCarvalho07/Cotacao-em-Tempo-Real">
-            <img src="./assets/images/CryptoBR Project.png" alt="CryptoBR">
+          <h3>Chamados de Manutenção</h3>
+          <a href="https://github.com/GabrielLoquetti/mobis.brtequipamentos">
+            <img src="./assets/images/CryptoBR Project.png" alt="Chamados de Manutenção">
           </a>
-          <p>Projeto feito em Typescript e Next.js para estudo do mesmo e uso de APIs.</p> 
+          <p>Descrição do projeto Chamados de Manutenção</p> 
         </div>
+
+        <div class="card"
+          <h3>Nalift Brasil</h3>
+          <a href="https://github.com/GabrielLoquetti/nalift.com.br">
+            <img src="./assets/images/CryptoBR Project.png" alt="Nalift Brasil">
+          </a>
+          <p>Descrição do projeto Nalift Brasil</p> 
+        </div>
+
+        <div class="card"
+          <h3>Landing Page Touareg</h3>
+          <a href="https://github.com/GabrielLoquetti/landing-page-touareg">
+            <img src="./assets/images/CryptoBR Project.png" alt="Landing Page Touareg">
+          </a>
+          <p>Descrição do projeto Landing Page Touareg</p> 
+        </div>
+
         <div class="card"
           <h3>AirTravel</h3>
           <a href="https://github.com/MaCarvalho07/Air-Travel">
@@ -52,6 +69,15 @@ function projetos(section) {
           </a>
           <p>Projeto de conclusão de curso. Ainda em desenvolvimento, clique para saber mais</p> 
         </div>
+
+        <div class="card"
+          <h3>Jogo da Forca</h3>
+          <a href="https://github.com/GabrielLoquetti/jogo_da_forca">
+            <img src="./assets/images/xneedware_landing_page.png" alt="xNeedWare">
+          </a>
+          <p>Primeiro projeto em Python. Jogo da Forca no Terminal</p> 
+        </div>
+        
       </div>
       
       <div class="social-projects">

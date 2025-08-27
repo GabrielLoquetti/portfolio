@@ -1006,24 +1006,6 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   cursor: pointer;
 }
 
-#toggle label::before {
-  content: "";
-  display: block;
-
-  width: 3rem;
-  height: 3rem;
-
-  background-color: var(--primary-color);
-  border-radius: 50%;
-
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0.6rem;
-  transform: translateX(0);
-
-  transition: 500ms;
-}
-
 #toggle input:checked + label::before {
   transform: translateX(3.8rem);
 }
@@ -1535,6 +1517,61 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
     width: 10rem;
     height: 3rem;
   }
+}
+
+  /* From Uiverse.io by andrew-demchenk0 */ 
+.theme {
+  --bg-color: #fff;
+  --main-color: #323232;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.input {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% -13px);
+  left: calc(50% -13px);
+  width: 26px;
+  height: 26px;
+}
+
+.icon.icon-moon {
+  fill: var(--main-color);
+}
+
+.icon.icon-sun {
+  stroke: var(--main-color);
+  display: none;
+}
+
+.input:checked ~ .icon.icon-sun {
+  display: block;
+}
+
+.input:checked ~ .icon.icon-moon {
+  display: none;
+}
+
+.theme:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
 }
 
 @media (max-width: 410px) {
