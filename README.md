@@ -1,31 +1,61 @@
 👨‍💻 Portfólio de Gabriel Loquetti
-Bem-vindo ao meu portfólio no GitHub! Este repositório é dedicado a abrigar e organizar todos os meus projetos de desenvolvimento. Cada projeto será armazenado em uma pasta separada, facilitando a navegação e a visualização do código-fonte.
+https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
 
-📂 Estrutura do Repositório
-O repositório está organizado da seguinte forma:
+Bem-vindo ao meu portfólio no GitHub! Este repositório serve como um hub centralizado para exibir meus projetos de desenvolvimento, demonstrando minhas habilidades e evolução como desenvolvedor.
 
+🚀 Projetos em Destaque
+<!-- Adicione aqui os projetos mais relevantes com badges -->
+[Projeto 1] - Breve descrição - 🔗 Demo | 📂 Código
+
+[Projeto 2] - Breve descrição - 🔗 Demo | 📂 Código
+
+[Projeto 3] - Breve descrição - 🔗 Demo | 📂 Código
+
+📁 Estrutura do Repositório
+text
 portfolio/
-├── index.html
-├── assets/
-│   ├── css
-│   ├── icons
-│   ├── images
-│   └── js
-└── README.md (este arquivo)
+├── 📄 index.html                 # Página principal do portfólio
+├── 📂 assets/                    # Recursos estáticos
+│   ├── 🎨 css/                   # Estilos e frameworks CSS
+│   ├── 🖼️ icons/                 # Ícones e SVG
+│   ├── 🖼️ images/                # Imagens e gráficos
+│   └── ⚡ js/                     # Scripts JavaScript
+└── 📄 README.md                  # Este arquivo
+Cada projeto possui sua própria documentação e inclui todos os arquivos necessários para execução.
 
-Cada diretório de projeto contém todos os arquivos necessários para sua execução, incluindo HTML, CSS, JavaScript e outros.
+🛠️ Stack Tecnológico
+💻 Linguagens de Programação
+https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 
-🛠️ Tecnologias Utilizadas
-Este portfólio reflete minhas habilidades nas seguintes tecnologias:
+🎨 Frontend
+https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
 
-Linguagens de Programação: JavaScript
+🔧 Ferramentas & Versionamento
+https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white
+https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white
 
-Marcação e Estilização: HTML5, CSS3
+📊 Estatísticas do GitHub
+https://github-readme-stats.vercel.app/api?username=gabriell-dev&show_icons=true&theme=radical
+https://github-readme-stats.vercel.app/api/top-langs/?username=gabriell-dev&layout=compact&theme=radical
 
-Controle de Versão: Git, GitHub
+🌱 O Que Estou Aprendendo
+Frameworks JavaScript (React, Vue)
 
-📬 Conecte-se Comigo
+Backend development (Node.js, Express)
 
-LinkedIn: [linkedin.com/in/gabriell](https://www.linkedin.com/in/gabriel-marin-26b33b248/)
+Bancos de dados (MongoDB, PostgreSQL)
 
-Email: gabrielmloquetti@gmail.com
+Metodologias ágeis e boas práticas de código
+
+📫 Vamos Conversar!
+Estou sempre aberto a novas oportunidades, colaborações em projetos interessantes ou simplesmente para trocar ideias sobre desenvolvimento.
+
+https://img.shields.io/badge/Conecte_se_no_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+https://img.shields.io/badge/Envie_um_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white
+
+⭐ Dica: Fique à vontade para explorar os repositórios e deixar uma estrela nos projetos que mais gostar!
+
+Última atualização: {{data atual}}
