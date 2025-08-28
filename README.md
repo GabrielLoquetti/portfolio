@@ -25,6 +25,7 @@ Marcação e Estilização: HTML5, CSS3
 Controle de Versão: Git, GitHub
 
 📬 Conecte-se Comigo
+
 LinkedIn: [linkedin.com/in/gabriell](https://www.linkedin.com/in/gabriel-marin-26b33b248/)
 
 Email: gabrielmloquetti@gmail.com
