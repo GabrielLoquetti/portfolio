@@ -1,46 +1,30 @@
 👨‍💻 Portfólio de Gabriel Loquetti
+Bem-vindo ao meu portfólio no GitHub! Este repositório é dedicado a abrigar e organizar todos os meus projetos de desenvolvimento. Cada projeto será armazenado em uma pasta separada, facilitando a navegação e a visualização do código-fonte.
 
-Bem-vindo ao meu portfólio! Aqui você encontrará projetos desenvolvidos ao longo da minha jornada como desenvolvedor. Cada projeto reflete meu aprendizado, dedicação e evolução contínua.
+📂 Estrutura do Repositório
+O repositório está organizado da seguinte forma:
 
-📌 Índice
+portfolio/
+├── index.html
+├── assets/
+│   ├── css
+│   ├── icons
+│   ├── images
+│   └── js
+└── README.md (este arquivo)
 
-Sobre Mim
-
-Projetos
-
-Conhecimento
-
-Contato
-
-👤 Sobre Mim
-
-Sou Gabriel Loquetti, apaixonado por tecnologia e desenvolvimento de software. Iniciei minha trajetória em 2024 e desde então venho aprimorando minhas habilidades em diversas tecnologias. Este portfólio é um reflexo do meu crescimento e dedicação.
-
-📂 Projetos
-1. Projeto Exemplo
-
-Descrição breve do projeto, destacando suas funcionalidades e tecnologias utilizadas.
-
-2. Outro Projeto
-
-Descrição breve do projeto, destacando suas funcionalidades e tecnologias utilizadas.
+Cada diretório de projeto contém todos os arquivos necessários para sua execução, incluindo HTML, CSS, JavaScript e outros.
 
 🛠️ Tecnologias Utilizadas
+Este portfólio reflete minhas habilidades nas seguintes tecnologias:
 
-Python
+Linguagens de Programação: JavaScript
 
-JavaScript
+Marcação e Estilização: HTML5, CSS3
 
-HTML/CSS
+Controle de Versão: Git, GitHub
 
-Git/GitHub
+📬 Conecte-se Comigo
+LinkedIn: [linkedin.com/in/gabriell](https://www.linkedin.com/in/gabriel-marin-26b33b248/)
 
-[Outras tecnologias]
-
-📬 Contato
-
-Email: gabriell@example.com
-
-LinkedIn: linkedin.com/in/gabriell
-
-GitHub: github.com/GabrielLoquetti
+Email: gabrielmloquetti@gmail.com
