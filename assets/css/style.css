@@ -288,6 +288,20 @@ section span {
   animation-delay: 0.3s;
 }
 
+@media screen and (max-width: 768px) {
+  .container-porcentagens {
+    flex-direction: column;
+  }
+
+  .skill-bar .skill-per {
+    background-color: #F0EDEE;
+  }
+
+  .skill-per .tooltip {
+    display: none;
+  }
+}
+
 @keyframes progress {
   0% {
     width: 0;
