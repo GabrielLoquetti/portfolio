@@ -1,0 +1,357 @@
+/* ===== MODO CLARO - CONFIGURAÇÕES ESPECÍFICAS ===== */
+body.light-mode {
+    /* Cores principais */
+    --primary-color: #2A2A2A;           /* Texto escuro para melhor contraste */
+    --primary-hover: #4A4A4A;           /* Hover mais escuro */
+    --secundary-color: #F5F5F7;         /* Fundo de seções claras */
+    --third-color: rgba(0, 0, 0, 0.05); /* Elementos terciários claros */
+    --bg-color: #FFFFFF;                /* Fundo principal branco */
+    
+    /* Sistema de cores de texto */
+    --headline: #1A1A1A;                /* Títulos quase pretos */
+    --paragraph: #4A4A4A;               /* Texto principal cinza escuro */
+    --paragraph-2: #666666;             /* Texto secundário */
+    
+    /* Cores de destaque (opcional) */
+    --accent-color: #007AFF;            /* Azul para links e elementos interativos */
+    --accent-hover: #0056CC;            /* Azul mais escuro no hover */
+    
+    /* Cores de borda */
+    --border-color: #E0E0E0;
+}
+
+/* ===== MELHORIAS GERAIS PARA O MODO CLARO ===== */
+
+/* Ajustes de contraste e legibilidade */
+body.light-mode {
+    color: var(--paragraph);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Melhor contraste para textos */
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4 {
+    color: var(--headline);
+    font-weight: 600;
+}
+
+/* Links no modo claro */
+body.light-mode a {
+    color: var(--accent-color);
+    transition: color 0.2s ease;
+}
+
+body.light-mode a:hover {
+    color: var(--accent-hover);
+}
+
+/* ===== COMPONENTES ESPECÍFICOS NO MODO CLARO ===== */
+
+/* Botões no modo claro */
+body.light-mode .button {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    filter: none;
+    transition: all 0.3s ease;
+}
+
+body.light-mode .button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegação no modo claro */
+body.light-mode nav.scroll {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode nav#navigation a.logo {
+    color: var(--headline);
+    filter: none;
+}
+
+body.light-mode nav#navigation .menu ul li a {
+    color: var(--paragraph);
+}
+
+body.light-mode nav#navigation .menu ul li a:hover,
+body.light-mode nav#navigation .menu ul li a.active {
+    color: var(--headline);
+    font-weight: 600;
+}
+
+/* Barras de progresso no modo claro */
+body.light-mode .skill-box .title {
+    color: var(--paragraph);
+}
+
+body.light-mode .skill-bar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .skill-bar .skill-per {
+    background: var(--primary-color);
+}
+
+body.light-mode .skill-per .tooltip {
+    background: var(--headline);
+    color: white;
+}
+
+body.light-mode .tooltip::before {
+    background: var(--headline);
+}
+
+/* Cards de projetos no modo claro */
+body.light-mode #projects .card {
+    background: white;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode #projects .card:hover {
+    background: #F9F9F9;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+/* Cards de conhecimento no modo claro */
+body.light-mode #knowledge .card {
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+body.light-mode #knowledge .card:hover {
+    background: #F9F9F9;
+}
+
+/* Seção de contato no modo claro */
+body.light-mode #contact {
+    background-color: var(--secundary-color);
+}
+
+body.light-mode #contact ul a:hover {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+/* Footer no modo claro */
+body.light-mode footer {
+    background-color: var(--secundary-color);
+    border-top: 1px solid var(--border-color);
+}
+
+body.light-mode footer .logo {
+    color: var(--headline);
+}
+
+body.light-mode footer p {
+    color: var(--paragraph);
+}
+
+/* Ícones sociais no modo claro */
+body.light-mode .social-links li:nth-child(1) svg path {
+    stroke: var(--paragraph);
+}
+
+body.light-mode .social-links li:nth-child(2) svg path:nth-child(2),
+body.light-mode .social-links li:nth-child(3) svg path:nth-child(2),
+body.light-mode .social-links li:nth-child(4) svg path:nth-child(2) {
+    fill: var(--paragraph);
+}
+
+body.light-mode .social-links li:nth-child(1) svg:hover path {
+    stroke: var(--accent-color);
+}
+
+body.light-mode .social-links li:nth-child(2) svg:hover path:nth-child(2),
+body.light-mode .social-links li:nth-child(3) svg:hover path:nth-child(2),
+body.light-mode .social-links li:nth-child(4) svg:hover path:nth-child(2) {
+    fill: var(--accent-color);
+}
+
+/* ===== BOTÃO BACK TO TOP NO MODO CLARO ===== */
+body.light-mode #backToTopButton circle {
+    fill: #000000; /* Preto no modo claro */
+}
+
+body.light-mode #backToTopButton path {
+    stroke: #ffffff; /* Seta branca para contraste */
+}
+
+body.light-mode #backToTopButton:hover circle {
+    fill: #333333; /* Preto mais claro no hover */
+}
+
+body.light-mode #backToTopButton:hover path {
+    stroke: #f0f0f0;
+}
+
+/* ===== EFEITOS VISUAIS ESPECÍFICOS PARA MODO CLARO ===== */
+
+/* Transições suaves entre modos */
+body.light-mode,
+body.light-mode * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Melhorias na barra de rolagem para modo claro */
+body.light-mode::-webkit-scrollbar-track {
+    background: #F1F1F1;
+}
+
+body.light-mode::-webkit-scrollbar-thumb {
+    background: #CCCCCC;
+    border-radius: 10px;
+}
+
+body.light-mode::-webkit-scrollbar-thumb:hover {
+    background: #AAAAAA;
+}
+
+/* ===== AJUSTES DE IMAGENS PARA MODO CLARO ===== */
+
+/* Ajuste de contraste para imagens no modo claro */
+body.light-mode img {
+    filter: brightness(1.05) contrast(1.05);
+}
+
+/* ===== BOTÃO DE TOGGLE PARA MODO CLARO/ESCURO ===== */
+
+/* Estilização do botão de alternância no modo claro */
+body.light-mode #toggle label {
+    background-color: var(--secundary-color);
+    border-color: var(--border-color);
+}
+
+/* Indicador visual de que está no modo claro */
+body.light-mode #toggle label::after {
+    content: "Modo Claro";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: var(--paragraph);
+    white-space: nowrap;
+}
+
+/* ===== MELHORIAS DE ACESSIBILIDADE ===== */
+
+/* Maior contraste para usuários com necessidades visuais */
+@media (prefers-contrast: high) {
+    body.light-mode {
+        --primary-color: #000000;
+        --headline: #000000;
+        --paragraph: #333333;
+        --border-color: #000000;
+    }
+}
+
+/* ===== BOTÃO BACK TO TOP (ESTILOS BASE) ===== */
+#backToTopButton {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(100%);
+    z-index: 999;
+    cursor: pointer;
+    border: none;
+    background: none;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+#backToTopButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Estilos base do botão (modo escuro como padrão) */
+#backToTopButton circle {
+    fill: #ffffff; /* Branco no modo escuro */
+    transition: all 0.3s ease;
+}
+
+#backToTopButton path {
+    stroke: #000000; /* Seta preta para contraste */
+    transition: all 0.3s ease;
+}
+
+#backToTopButton:hover circle {
+    fill: #e0e0e0;
+    transform: scale(1.05);
+}
+
+#backToTopButton:hover path {
+    stroke: #333333;
+}
+
+/* ===== BOTÃO GITHUB PERSONALIZADO ===== */
+.button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.icon {
+    background-color: #fff;
+    padding: 10px 10px 5px 10px;
+}
+
+.icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.cube {
+    transition: all 0.4s;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 20px;
+}
+
+.button-icon:hover {
+    border-color: #ff98a2;
+}
+
+.button-icon:hover .cube {
+    transform: rotateX(90deg);
+}
+
+.side {
+    position: absolute;
+    height: 47px;
+    width: 200px;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.top {
+    background: #ff98a2;
+    color: #fff;
+    transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+
+.front {
+    background: #222229;
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+}
