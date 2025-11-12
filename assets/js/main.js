@@ -11,6 +11,12 @@ const notebook_2 = document.querySelector("#notebook-2");
 const notebook_2_white = document.querySelector("#notebook-2-white");
 const vidro = document.querySelector("#vidro");
 
+// Seções para navegação
+const about = document.querySelector("#about");
+const projects = document.querySelector("#projects");
+const knowledge = document.querySelector("#knowledge");
+const contact = document.querySelector("#contact");
+
 window.addEventListener("load", function begin() {
   projetos(projectsSection);
   
