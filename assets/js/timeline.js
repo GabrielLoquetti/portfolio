@@ -4,25 +4,25 @@ function createTimeline() {
     {
       year: '2023',
       title: 'Início dos Estudos',
-      description: 'Comecei minha jornada em Desenvolvimento de Sistemas',
+      description: 'Despertou minha curiosidade em fazer cursos de programação',
       icon: '🎓'
     },
     {
       year: '2024',
       title: 'Primeiros Projetos',
-      description: 'Desenvolvimento de projetos em Python, HTML, CSS e JavaScript',
+      description: 'Começou minha jornada no Técnico em Desenvolvimento de Sistemas, onde no primeiro ano foquei em Python e Lógica de Programação',
       icon: '💻'
     },
     {
-      year: '2024',
-      title: 'Frameworks',
-      description: 'Aprendizado de Laravel, React e Node.js',
+      year: '2025',
+      title: 'Desenvolvimento Web',
+      description: 'Aprendizado de HTML, CSS e JavaScript, onde comecei a desenvolver minhas primeiras aplicações web',
       icon: '⚛️'
     },
     {
       year: '2025',
       title: 'Projeto TCC',
-      description: 'Desenvolvimento do xNeedWare - Projeto de conclusão de curso',
+      description: 'Desenvolvimento do xNeedWare - Projeto de conclusão de curso, onde desenvolvi mais o Node.js, MySQL e APIs',
       icon: '🚀'
     }
   ];

@@ -61,8 +61,21 @@ function createCertificates() {
 
   // Adicionar efeito de hover 3D
   const cards = certificatesSection.querySelectorAll('.certificate-card');
-  cards.forEach(card => {
+  cards.forEach((card, index) => {
+    // Adicionar classe para identificar cada card
+    card.setAttribute('data-card-index', index);
+    
+    // Garantir que o card tenha pointer-events habilitado
+    card.style.pointerEvents = 'auto';
+    card.style.cursor = 'pointer';
+    
+    card.addEventListener('mouseenter', () => {
+      card.classList.add('is-hovering');
+    });
+    
     card.addEventListener('mousemove', (e) => {
+      if (!card.classList.contains('is-hovering')) return;
+      
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
@@ -73,11 +86,19 @@ function createCertificates() {
       const rotateX = (y - centerY) / 10;
       const rotateY = (centerX - x) / 10;
       
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+      // Usar requestAnimationFrame para suavizar
+      requestAnimationFrame(() => {
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+        card.style.willChange = 'transform';
+      });
     });
     
     card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+      card.classList.remove('is-hovering');
+      requestAnimationFrame(() => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        card.style.willChange = 'auto';
+      });
     });
   });
   
@@ -86,7 +107,7 @@ function createCertificates() {
     ScrollReveal().reveal('.certificate-card', {
       origin: 'bottom',
       distance: '50px',
-      duration: 1000,
+      duration: 100,
       interval: 150
     });
   }
