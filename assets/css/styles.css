@@ -11,8 +11,7 @@
   --hue: 90;
   --primary-color: #F0EDEE;
   --primary-hover: #07393C;
-  --secundary-color: hsl(0, 0%, 5%);
-  --third-color: hsla(0, 0%, 100%, 0.1);
+  --third-color: hsla(0, 0%, 100%, 0.121);
   --bg-color: #0A090C ;
 
   --headline: hsl(0, 0%, 100%);
@@ -149,6 +148,8 @@ img {
 section {
   padding-block: 10rem;
   padding-inline: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 section h4 {
@@ -1127,6 +1128,8 @@ footer {
 
   text-align: left;
   color: var(--paragraph);
+  position: relative;
+  z-index: 1;
 }
 
 footer .wrapper {
