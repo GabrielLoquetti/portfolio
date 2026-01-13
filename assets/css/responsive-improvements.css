@@ -1,0 +1,145 @@
+/* ===== MELHORIAS DE RESPONSIVIDADE E ACESSIBILIDADE ===== */
+
+/* Previne quebra de layout em telas muito pequenas */
+* {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Melhora o overflow em dispositivos móveis */
+body {
+  overflow-x: hidden;
+}
+
+/* Garante que imagens sejam responsivas */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Melhora a legibilidade de textos */
+p, span, li, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Melhora o toque em dispositivos móveis */
+@media (hover: none) and (pointer: coarse) {
+  a, button, .button, .card {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  nav button {
+    padding: 8px;
+  }
+}
+
+/* Melhora contraste para acessibilidade */
+@media (prefers-contrast: high) {
+  :root {
+    --paragraph: hsl(0, 0%, 70%);
+  }
+
+  .button {
+    border-width: 0.3rem;
+  }
+}
+
+/* Reduz movimento para usuários com preferência */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Melhorias para telas muito pequenas (<360px) */
+@media (max-width: 359px) {
+  :root {
+    font-size: 55%;
+  }
+
+  .wrapper {
+    padding-inline: 1.5rem;
+  }
+
+  #home h1 {
+    font-size: 2.8rem;
+  }
+
+  .button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Melhorias para landscape em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  #home {
+    min-height: 100vh;
+    padding-block: 4rem;
+  }
+
+  section {
+    padding-block: 4rem;
+  }
+
+  #home .wrapper::before {
+    display: none;
+  }
+}
+
+/* Otimização para telas intermediárias (600px-767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .wrapper {
+    width: min(60rem, 100%);
+  }
+
+  #knowledge .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #knowledge .card {
+    width: calc(50% - 1rem);
+  }
+}
+
+/* Melhoria de foco para acessibilidade via teclado */
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Garante que elementos interativos sejam clicáveis */
+.card,
+.button,
+nav button,
+.social-links a {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Melhora a tipografia em telas de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Previne zoom indesejado em inputs no iOS */
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}

@@ -3,7 +3,6 @@ import { projetos } from "./projetos.js";
 
 const navigation = document.querySelector("#navigation");
 const backToTopButton = document.querySelector("#backToTopButton");
-const bb8Checkbox = document.querySelector(".bb8-toggle__checkbox");
 const projectsSection = document.querySelector("#projects .wrapper");
 
 // Imagens antigas removidas - agora usando terminal de código
@@ -115,20 +114,6 @@ ScrollReveal({
   #contact header`
 );
 
-// Tema inicial salvo no localStorage
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  document.body.classList.add(savedTheme);
-  if (savedTheme === "light-mode") bb8Checkbox.checked = true;
-}
-
-// Alterna tema ao clicar no BB-8
-bb8Checkbox.addEventListener("change", () => {
-  if (bb8Checkbox.checked) {
-    document.body.classList.add("light-mode");
-    localStorage.setItem("theme", "light-mode");
-  } else {
-    document.body.classList.remove("light-mode");
-    localStorage.setItem("theme", "dark-mode");
-  }
-});
+// Tema escuro permanente - tema claro removido
+document.body.classList.remove("light-mode");
+localStorage.removeItem("theme");

@@ -1,0 +1,278 @@
+/* ===== ANIMAÇÃO DE HOLOGRAMA 3D - STAR WARS ===== */
+
+.hologram-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+/* Scanner de linha (efeito de holograma) */
+.hologram-scanner {
+  position: absolute;
+  width: 120%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(74, 144, 226, 0.8),
+    rgba(135, 206, 235, 0.8),
+    transparent
+  );
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
+  animation: scan 3s linear infinite;
+  z-index: 10;
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Órbita de dados */
+.data-orbit {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.data-point {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(74, 144, 226, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.8);
+  animation: orbit 4s linear infinite;
+  animation-delay: var(--delay);
+  transform-origin: 0 0;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(var(--orbit)) translateX(125px) rotate(calc(-1 * var(--orbit)));
+  }
+  100% {
+    transform: rotate(calc(var(--orbit) + 360deg)) translateX(125px) rotate(calc(-1 * (var(--orbit) + 360deg)));
+  }
+}
+
+/* Cubo 3D central */
+.hologram-cube {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s linear infinite;
+}
+
+@keyframes rotateCube {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.cube-face {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(74, 144, 226, 0.05);
+  border: 1px solid rgba(74, 144, 226, 0.6);
+  box-shadow:
+    inset 0 0 20px rgba(74, 144, 226, 0.2),
+    0 0 20px rgba(74, 144, 226, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.face-grid {
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(74, 144, 226, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.cube-front  { transform: translateZ(60px); }
+.cube-back   { transform: rotateY(180deg) translateZ(60px); }
+.cube-left   { transform: rotateY(-90deg) translateZ(60px); }
+.cube-right  { transform: rotateY(90deg) translateZ(60px); }
+.cube-top    { transform: rotateX(90deg) translateZ(60px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(60px); }
+
+/* Anéis de energia */
+.energy-ring {
+  position: absolute;
+  border: 1px solid rgba(74, 144, 226, 0.4);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.ring-1 {
+  width: 180px;
+  height: 180px;
+  animation-delay: 0s;
+}
+
+.ring-2 {
+  width: 220px;
+  height: 220px;
+  animation-delay: 0.6s;
+}
+
+.ring-3 {
+  width: 260px;
+  height: 260px;
+  animation-delay: 1.2s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* Partículas flutuantes */
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(74, 144, 226, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30px) translateX(10px);
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
+/* Texto de dados */
+.hologram-data {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: rgba(74, 144, 226, 0.8);
+  text-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.data-line {
+  opacity: 0;
+  animation: fadeInText 1s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tema claro removido - apenas tema escuro */
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hologram-container {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .data-orbit {
+    width: 200px;
+    height: 200px;
+  }
+
+  .data-point {
+    animation: orbit 4s linear infinite;
+  }
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(var(--orbit)) translateX(100px) rotate(calc(-1 * var(--orbit)));
+    }
+    100% {
+      transform: rotate(calc(var(--orbit) + 360deg)) translateX(100px) rotate(calc(-1 * (var(--orbit) + 360deg)));
+    }
+  }
+
+  .hologram-cube {
+    width: 90px;
+    height: 90px;
+  }
+
+  .cube-face {
+    width: 90px;
+    height: 90px;
+  }
+
+  .cube-front  { transform: translateZ(45px); }
+  .cube-back   { transform: rotateY(180deg) translateZ(45px); }
+  .cube-left   { transform: rotateY(-90deg) translateZ(45px); }
+  .cube-right  { transform: rotateY(90deg) translateZ(45px); }
+  .cube-top    { transform: rotateX(90deg) translateZ(45px); }
+  .cube-bottom { transform: rotateX(-90deg) translateZ(45px); }
+
+  .ring-1 { width: 140px; height: 140px; }
+  .ring-2 { width: 170px; height: 170px; }
+  .ring-3 { width: 200px; height: 200px; }
+
+  .hologram-data {
+    font-size: 0.75rem;
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hologram-container {
+    max-width: 250px;
+    height: 250px;
+  }
+
+  .hologram-data {
+    font-size: 0.7rem;
+  }
+}

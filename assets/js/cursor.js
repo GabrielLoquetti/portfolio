@@ -76,7 +76,10 @@ class CustomCursor {
   }
 }
 
-// Inicializar apenas em desktop
+// Cursor customizado desabilitado para manter profissionalismo
+// Se quiser reativar, descomente o código abaixo:
+
+/*
 if (window.innerWidth > 768) {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => new CustomCursor());
@@ -84,4 +87,5 @@ if (window.innerWidth > 768) {
     new CustomCursor();
   }
 }
+*/
 
